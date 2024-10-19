@@ -1,0 +1,380 @@
+//Chapter: 10 
+//Functions
+
+//Q:01
+//Sum of Two Numbers:
+//Write a function that takes two numbers as arguments and returns their sum.
+
+//Ans
+
+function sum(a , b){
+  return a+b ;
+}
+var newSum = sum;
+console.log(newSum(5,10));
+
+
+//Q:02
+//Convert Celsius to Fahrenheit:
+//Create a function that converts a temperature from Celsius to Fahrenheit using the formula F =
+//C * 9/5 + 32.
+
+//Ans
+//WE USE THE FORMULA 
+//CELSIUS * 9/5 + 32
+//let suppose Celsius = 25
+ 
+function celsius(a,b,c,d){
+  console.log(a*b/c+d)
+};
+celsius(25,9,5,32);
+
+//Q:03
+//Check for Prime Number:
+//Write a function that takes a number as input and returns true if the number is prime, and false otherwise.
+//Ans
+
+
+const isPrime = (num) => {
+    if (num <= 1) return false;
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) return false;
+    }
+    return true;
+};
+
+
+
+
+
+//Q:04
+//Reverse a String:
+//Create a function that takes a string as input and returns the string reversed.
+
+function reverseSting(name){
+ return name.split('').reverse().join('');
+}
+let myReversedSting = reverseSting("student");
+console.log(myReversedSting);
+
+
+
+
+
+
+//Q:05
+//Factorial of a Number:
+//Write a function that calculates the factorial of a given number (e.g., factorial(5) should return 120).
+
+//Ans
+function factorialnum(a,b,c,d,e){
+ return a*b*c*d*e ;
+}
+let num = factorialnum;
+console.log(factorialnum(5,4,3,2,1));
+
+//Q:06
+//Greet User (No Parameters):
+//Write a function that prints a generic greeting message like "Hello, welcome!" without taking any parameters.
+//Ans
+ function greetings(){
+   console.log("Hello, welcome!")
+ }
+ greetings();
+ 
+ 
+ 
+ 
+ 
+ //Q:07
+ //Greet by Name (With Parameter):
+//Create a function that takes a name as a parameter and prints a personalized greeting, e.g., "Hello, [name]!".
+//Ans
+
+function greet(name){
+ console.log("Hello," +" "+  name + "!")
+}greet("Fatima");
+
+//Q:08  
+//Sum of Two Numbers (With Parameters):
+//Write a function that accepts two numbers as parameters and returns their sum.
+//Ans
+function sum(a,b){
+  return a+b ;
+}
+var newSum = sum;
+console.log(newSum(8,8));
+
+
+//Q:09
+//Random Number Generator (No Parameters): Create a function that generates and returns a random number between 0 and 100. This function does not require any parameters.
+
+//Ans
+
+function randomnum(){
+  return Math.floor (Math.random()* 100) ;
+}
+let myrandomnum = randomnum();
+console.log(myrandomnum);
+
+
+
+//Q:10
+//Check Age for Voting (Witth Parameter): Write a function that takes age as a parameter and checks if the person is eligible to vote (18 years or older). It should return true or false
+//Ans
+ 
+ 
+ function maxiAge(theAge){
+
+  if(theAge >= 18){
+
+   console.log("Age" +" "+ theAge +" "+ " eligible to vote");
+  }else{
+    console.log("Age" +" "+ theAge +" "+ "not eligible to vote");
+  }
+}
+maxiAge(25);
+ 
+ 
+ 
+ 
+ 
+ 
+ //Chapter 11
+ // Arrow Function
+//Square of a Number:
+
+//Q:01
+//Write an arrow function that takes a number as input and returns its square.
+//Ans
+const square = (a) => a * a;
+console.log(square(5));
+
+//Q:02
+//Array of Even Numbers:
+//Create an arrow function that takes an array of numbers and returns a new array containing only the even numbers
+//Ans
+
+
+
+//Q:03
+//Concatenate Strings:
+//Write an arrow function that takes two strings as arguments and returns them concatenated.
+
+//Ans
+
+
+const concatenateStrings = (str1, str2) => str1 + str2;
+console.log(concatenateStrings(12,15));
+
+
+
+
+//Q:04
+//Find Maximum Number in an Array:
+//Create an arrow function that accepts an array of numbers and returns the maximum value in the array.
+//Ans
+
+const myNumbers = [3, 95, 7, 32, 28];
+const findMax = (arr) => Math.max(...arr);
+
+console.log(findMax(myNumbers)); 
+
+
+//Q:05
+//Sum of All Numbers in an Array:
+//Write an arrow function that takes an array of numbers as input and returns the sum of all the numbers
+//Ans
+const theNumbers = [12, 50];
+const sumArray = (arry) => arry.reduce((acc, num) => acc + num, 0);
+console.log(sumArray(theNumbers));
+
+
+
+
+
+
+//Q:06
+//Print "Hello World" (No Parameters): Write an arrow function that takes no parameters and simply prints "Hello World" to the console.
+//Ans
+const noPara = ( ) => console.log(noPara("hello,world"));
+
+
+
+
+//Q:07
+//Calculate Square of a Number (With Parameter):
+//Create an arrow function that takes a number as a parameter and returns its square.
+//Ans
+const squareOfNum = (a) => a*a ;
+console.log(squareOfNum(9));
+
+
+//Q:08
+//Check if Number is Positive (With Parameter):
+//Write an arrow function that accepts a number as a parameter and returns true if the number is positive, and false if it is negative or zero.
+//Ans
+const isNumPositive = (num) => num > 0 ;
+console.log(isNumPositive(10))
+console.log(isNumPositive(-9))
+
+
+
+
+//Q:09
+//Generate a Random Number (No Parameters):
+//Create an arrow function that takes no parameters and returns a random number between 1 and 50.
+
+//Ans, 
+const getRandomNumber = () => Math.floor(Math.random() * 50) + 1;
+
+
+
+
+
+//Q:10
+//Convert Minutes to Seconds (With Parameter):
+//Write an arrow function that takes minutes as a parameter and returns the equivalent time in seconds.
+//Ans
+
+const minutesToSeconds = (minutes) => minutes*60 ;
+
+console.log(minutesToSeconds(7));
+
+
+//Chapter 12.
+//Annoynumus Function
+//Q:01
+//Print "Hello" (No Parameters):
+//Create an anonymous function that prints "Hello" to the console. Immediately invoke the function.
+//Ans
+
+const myFunction = function(){
+  console.log("Hello");
+}
+myFunction();
+
+
+
+//Q:02
+//Sum of Two Numbers (With Parameters):
+//Write an anonymous function that takes two numbers as arguments and returns their sum. Assign it to a variable and call the function.
+//Ans
+ const newAdd = function(a,b){
+   return a + b;
+ }
+let mySum = newAdd;
+console.log(mySum(100,60));
+
+
+//Q:03
+//Array Sorting (With Parameters):
+//Use an anonymous function as a callback in Array.sort() to sort an array of numbers in ascending order.
+//Ans
+
+const userNumbers = [9, 0, 7, 4, 2];
+
+userNumbers.sort(function(a, b) {
+    return a - b;
+});
+
+console.log(userNumbers); 
+
+
+
+
+
+
+//Q:04
+//Greeting Message (With Parameter): Create an anonymous function that takes a name as a parameter and logs a greeting message like "Hello, [name]!". Immediately invoke the function.
+//Ans
+
+const userName = function(name){
+console.log("Hello"+" "+ name)  
+}
+userName("Amna");
+
+//Q:05
+//Check if Number is Even or Odd (With Parameter): Write an anonymous function that takes a number as a parameter and logs whether the number is even or odd. Store it in a variable and then invoke it.
+//Ans
+const myNum = function(a){
+  return a
+}
+var newNum = myNum 
+console.log(newNum(8));
+
+
+//Q:06
+//Filter Odd Numbers from an Array (With Parameters): Use an anonymous function as a callback in Array.filter() to return only the odd numbers from an array of integers.
+//Ans
+
+
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const oddNumbers = numbers.filter
+
+(function(num) {
+    return num % 2 !== 0;
+});
+
+console.log(oddNumbers); 
+
+
+
+
+
+
+
+
+
+
+
+
+//Q:07
+//Factorial Calculation (With Parameter): Create an anonymous function that takes a number as input and returns its factorial. Assign the function to a variable and call it with different inputs.
+//Ans
+
+const factorial = function(n){
+ if(n < 0)
+ return undefined;
+ if( n === 0 || n === 1)
+ return 1 ;
+ 
+return n*factorial(n-1);
+ 
+ 
+ 
+}
+//different inputs 
+
+var myFactor = factorial;
+console.log(myFactor(5));
+
+var myFactor = factorial;
+console.log(myFactor(8));
+
+
+
+
+
+
+//Q:08
+//Sum of All Elements in an Array (With Parameter): Write an anonymous function as a callback in Array.reduce() to sum all the elements in an array.
+//Ans
+const theSum= [1, 2, 3, 4, 6];
+
+const allSum = numbers.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+
+console.log(allSum); 
+
+
+//Q:09
+//Check Voting Eligibility (With Parameter): Create an anonymous function that takes an age as input and logs whether the person is eligible to vote (age >= 18). Immediately invoke the function with different ages.
+//Ans
+const myAge = function(age){
+  if(age >= 18){
+   console.log("Age" +" "+ age +" "+ " eligible to vote");
+  }else{
+    console.log("Age" +" "+ age +" "+ "not eligible to vote");
+  }
+}
+myAge(15);
